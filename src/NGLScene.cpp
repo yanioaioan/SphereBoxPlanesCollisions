@@ -508,6 +508,10 @@ void NGLScene::timerEvent(QTimerEvent * _event)
         m_sphereVel = -m_sphereVel;
     }
 
+    if ( intersect(m_spherePos, sphereRadius,box2XYZmin, box2XYZmaxn)  )
+    {
+        m_sphereVel = -m_sphereVel;
+    }
 
 
     m_spherePos+=m_sphereVel;
